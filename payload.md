@@ -65,6 +65,34 @@ See [this file on GitHub](https://github.com/taipanic/iot-app/blob/main/README.m
 }
 ```
 
+### Example provisioning message for hotel
+
+```json
+{
+  "k": "abcdef",
+  "d": [
+    {
+      "localId": "uid001",
+      "value": "Boolean",
+      "command": true,
+      "name": "state"
+    },
+    {
+      "localId": "uid002",
+      "value": "Number",
+      "command": true,
+      "name": "temperature"
+    },
+    {
+      "localId": "uid003",
+      "value": "Number",
+      "command": true,
+      "name": "fan"
+    }
+  ]
+}
+```
+
 ## Telemetry
 
 ### Telemetry message properties
@@ -103,6 +131,32 @@ See [this file on GitHub](https://github.com/taipanic/iot-app/blob/main/README.m
     {
       "i": "uid003",
       "v": true
+    },
+    {
+      "i": "uid004",
+      "v": true
+    }
+  ]
+}
+```
+
+### Example telemetry message for hotel
+
+```json
+{
+  "k": "abcdef",
+  "d": [
+    {
+      "i": "uid001",
+      "v": true
+    },
+    {
+      "i": "uid002",
+      "v": 25
+    },
+    {
+      "i": "uid003",
+      "v": 3
     }
   ]
 }
@@ -146,6 +200,31 @@ See [this file on GitHub](https://github.com/taipanic/iot-app/blob/main/README.m
       "i": "uid003",
       "c": "set",
       "v": false
+    }
+  ]
+}
+```
+
+### Example command message for hotel
+
+```json
+{
+  "k": "abcdef",
+  "d": [
+    {
+      "i": "uid001",
+      "c": "set",
+      "v": false
+    },
+    {
+      "i": "uid002",
+      "c": "set",
+      "v": 19
+    }
+    {
+      "i": "uid003",
+      "c": "set",
+      "v": 1
     }
   ]
 }
