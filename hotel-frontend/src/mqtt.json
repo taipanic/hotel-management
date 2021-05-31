@@ -1,0 +1,28 @@
+[
+  {
+    "a": [{ "c": "d" }, { "e": false }, { "b": 2 }],
+    "c": "d",
+    "e": "f"
+  },
+
+  {
+    "apikey": "d7e6a4ad8dc81304",
+    "channels": [
+      {
+        "name": "state",
+        "localId": "state",
+        "valueType": "String"
+      },
+      {
+        "name": "temp",
+        "localId": "temp",
+        "valueType": "Number"
+      },
+      {
+        "name": "fan",
+        "localId": "fan",
+        "valueType": "Number"
+      }
+    ]
+  }
+]

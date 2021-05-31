@@ -1,23 +1,21 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require("mongoose");
+const { Schema } = mongoose;
 
-var floorSchema = new Schema({
+const floorSchema = new Schema({
   name: {
-    type: Number,
-    min: 1,
-    max: 99,
+    type: String,
     required: true,
-    validate : {
-      validator : Number.isInteger,
-      message   : '{VALUE} is not an integer value'
-    }
   },
-  children: [
+  type: {
+    type: String,
+    required: true,
+  },
+  refRoom: [
     {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "Room"
-    }
-  ]
+      ref: "Room",
+    },
+  ],
 });
 
 module.exports = mongoose.model("Floor", floorSchema);
